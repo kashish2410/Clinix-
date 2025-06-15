@@ -1,0 +1,107 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: transparent;
+    background-image: url("download.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    background: #a8e1ffc2;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 800px;
+    text-align: center;
+    color: #3D0301;
+}
+.button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+.scanner { 
+    background: #D76C82;
+    color: white; 
+}
+.qr { 
+    background: #B03052;
+     color: white; 
+}
+.chatbot { 
+    background: #D76C82;
+     color: white; 
+}
+.assessment { 
+    background: #B03052;
+     color: white; 
+}
+.chat-box {
+    background: #f1f1f1;
+    height: 300px;
+    overflow-y: auto;
+    padding: 15px;
+    text-align: left;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.hidden { 
+    display: none;
+}
+.scanner-animation {
+    width: 250px;
+    height: 300px;
+    background: url('https://via.placeholder.com/150x300') no-repeat center;
+    background-size: contain;
+    background-image: url("barcode.jpeg") ;
+    background-size: cover;
+    position: relative;
+    margin: auto;
+    background-color: transparent;
+}
+.scan-line {
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    background: green;
+    top: 0;
+    animation: scanMove 2s infinite alternate;
+}
+@keyframes scanMove {
+    0% { top: 0; }
+    100% { top: 100%; }
+}
+#userInput {
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    font-size: 1.2rem;
+    border: 3px solid #3D0301;
+    border-radius: 5px;
+}
+.nav {
+    color: #3D0301;
+    font-size: 1.3rem;
+}
+#scanner{
+    background-color: #d76c8158;
+}
+.risk{
+    color: #3D0301;
+    font-size: 1.3rem;
+}
+label{
+    color: #3D0301;
+}

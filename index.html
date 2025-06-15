@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clinix - AI-Powered Health Insights</title>
+    <script src="https://unpkg.com/html5-qrcode" defer></script>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+
+<body>
+    <div class="container">
+        <h1>Clinix - AI Health Insights</h1>
+        <button class="button scanner" onclick="showScanner()">AI Health Scan (Facial Analysis)</button>
+        <button class="button qr" onclick="showBarcodeScanner()">Medicine Authenticity Scanner</button>
+        <button class="button chatbot" onclick="showChatbot()">AI Health Chatbot</button>
+        <button class="button assessment" onclick="showHealthAssessment()">Health Assessment & Risk Prediction</button>
+        
+        <div id="scanner" class="hidden">      
+            <h2>Medicine Authenticity Check</h2>
+            <div class="scanner-animation">
+                <div class="scan-line"></div>
+            </div>
+            <p id="barcodeResult">Scan BarCode to verify the medicine.</p>
+            <button class="button nav" onclick="goBack()">Back</button>
+        </div>
+        
+        <div id="qrScanner" class="hidden">
+            <h2>AI Health Scanner</h2>
+            <div id="qr-reader"></div>
+            <p>Analyzing your face...</p>
+            <button class="button nav" onclick="goBack()">Back</button>
+        </div>
+        
+        <div id="chatbot" class="hidden">
+            <h2>AI Health Chatbot</h2>
+            <div class="chat-box" id="chatbox">
+                <p><strong>User:</strong> How can I boost my immunity?</p>
+                <p><strong>Chatbot:</strong> Maintain a healthy diet, exercise regularly, and get enough sleep.</p>
+            </div>
+            <input type="text" id="userInput" placeholder="Type a message...">
+            <button class="button nav" onclick="sendMessage()">Send</button>
+            <button class="button nav" onclick="goBack()">Back</button>
+        </div>
+
+        <div id="healthAssessment" class="hidden">
+            <h2>Health Assessment & Risk Prediction</h2>
+            <label>Age: <input type="number" id="age"></label><br>
+            <label>Weight (kg): <input type="number" id="weight"></label><br>
+            <label>Height (cm): <input type="number" id="height"></label><br>
+            <label>Symptoms: <input type="text" id="symptoms" placeholder="E.g., cough, fever"></label><br>
+            <button class="button risk" onclick="assessHealth()">Check Risk</button>
+            <p id="assessmentResult"></p>
+            <button class="button nav" onclick="goBack()">Back</button>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
